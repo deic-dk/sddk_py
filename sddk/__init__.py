@@ -160,7 +160,7 @@ class cloudSession:
                     print("connection with shared folder failed")
                     sys.exit()
             print("endpoint variable has been configured to: " + root_folder_url)
-        if "owncloud.cesnet.cz" in provider:
+        if "owncloud.cesnet.cz" in str(provider):
             user = input("Insert your Username code (a long string of characters and numbers): ")
             password = getpass.getpass("Insert your Password/Token: ")
             s = requests.Session() # create session
