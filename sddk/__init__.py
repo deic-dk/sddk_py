@@ -14,7 +14,6 @@ import geopandas as gpd
 import shapely
 import plotly.graph_objects as go
 import sys
-from sys import exit
 import io
 from bs4 import BeautifulSoup
 #import pyarrow.feather as feather
@@ -63,7 +62,7 @@ def make_data_from_object(python_object, file_ending):
         else:
             python_object.savefig('temp.png', dpi=python_object.dpi)
             return (type(python_object), open("temp.png", 'rb'))
-    if isinstance(python_object, plotly.graph_objs._figure.Figure):
+    if isinstance(python_object, plotly.graph_objs.Figure):
         python_object.write_image("temp.png") 
         return (type(python_object), open("temp.png", 'rb'))
     else:
@@ -159,7 +158,7 @@ class cloudSession:
                     print("connection with shared folder established with you as its ordinary user")
                 else:
                     print("connection with shared folder failed")
-                    exit()
+                    sys.exit()
             print("endpoint variable has been configured to: " + root_folder_url)
         if "owncloud.cesnet.cz" in provider:
             user = input("Insert your Username code (a long string of characters and numbers): ")
