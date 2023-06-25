@@ -14,6 +14,7 @@ import geopandas as gpd
 import shapely
 import plotly.graph_objects as go
 import sys
+from sys import exit
 import io
 from bs4 import BeautifulSoup
 #import pyarrow.feather as feather
@@ -158,7 +159,7 @@ class cloudSession:
                     print("connection with shared folder established with you as its ordinary user")
                 else:
                     print("connection with shared folder failed")
-                    exit
+                    exit()
             print("endpoint variable has been configured to: " + root_folder_url)
         if "owncloud.cesnet.cz" in provider:
             user = input("Insert your Username code (a long string of characters and numbers): ")
