@@ -8,3 +8,4 @@ requests>=2
 matplotlib>=3.3.4
 geopandas
 shapely
+kaleido
