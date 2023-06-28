@@ -18,6 +18,7 @@ import io
 from bs4 import BeautifulSoup
 #import pyarrow.feather as feather
 import subprocess
+from urllib.error import HTTPError
 
 def test_package():
     print("here we are right now")
